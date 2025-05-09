@@ -25,7 +25,7 @@ export function App() {
   }));
 
   const BuuttonStyle = {
-    background: '#00ED3C'
+    background: '#229F43'
   }
 
   const ImgStyle = {
