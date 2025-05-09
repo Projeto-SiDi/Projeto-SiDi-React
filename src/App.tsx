@@ -6,9 +6,10 @@ import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
 import { useForm } from "react-hook-form";
 import TextField from '@mui/material/TextField';
-import { FormControl, InputLabel, OutlinedInput, InputAdornment, IconButton, Button, withStyles} from '@mui/material';
+import { FormControl, InputLabel, OutlinedInput, InputAdornment, IconButton, Button, withStyles, Link} from '@mui/material';
 import { Eye, EyeClosed } from '@phosphor-icons/react';
-import logoSidi from './assets/logoSidi.png';
+import Seja_Bem_vindo from './assets/Seja_bem_vindo.svg';
+import LogoSidi from './assets/LogoSidi.svg';
 
 
 export function App() {
@@ -25,6 +26,19 @@ export function App() {
 
   const BuuttonStyle = {
     background: '#00ED3C'
+  }
+
+  const ImgStyle = {
+    height: '75px',
+    width: '400px',
+    marginTop: '7rem ',
+  }
+
+  const LogoSidiStyle = {
+    height: '60px',
+    width: '200px',
+    
+
   }
 
   
@@ -44,19 +58,22 @@ export function App() {
 
   return (
 
-    <Box sx={{ display: 'flex',  alignItems: 'center', minWidth: '30%', pl: '32%' }}>
+    <Box sx={{ display: 'flex',  alignItems: 'center', minWidth: '30%', pl: '35%' }}>
     <Grid sx={{ height: "800px", justifyContent: "center", alignItems: 'center', width: '900px', flexDirection: 'column'}} >
       <Grid sx={{maxWidth: '80%'}}>
         <Stack>
           <Item>
+            <img src={Seja_Bem_vindo} style={ImgStyle}/>
+            
             <div>
+              <img src={LogoSidi} style={LogoSidiStyle} />
               
               
                 <TextField
                 id="outlined-multiline-flexible"
                 label="Email"
                 maxRows={2}
-                sx={{height: '56px', width: '38rem', marginTop: '30%', marginBottom: '30px'}}
+                sx={{height: '56px', width: '38rem', marginTop: '15%', marginBottom: '30px'}}
                 
               />
               <FormControl sx={{ m: 1,width: '38rem', height: '56px'}} variant="outlined">
@@ -82,10 +99,18 @@ export function App() {
                   label="Password"
                 />
                 <Button style={BuuttonStyle} variant='contained' sx={{marginTop: '20px'}}>Entrar</Button>
+
+                <Link href="#" underline="always" sx={{paddingTop: '40px'}}>
+                  {'Esqueceu a senha?'}
+                </Link>
+  
+                <Link href="#" underline="always" sx={{paddingTop: '40px', maxWidth: '130px', marginLeft: '237px'}}>
+                  {'Criar uma conta'}
+                </Link>
               </FormControl>
               
             </div>
-            
+              
           </Item>
         </Stack>
       </Grid>
