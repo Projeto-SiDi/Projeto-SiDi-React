@@ -18,7 +18,9 @@ body {
 	overflow: hidden;
 }
 
-body, input, textarea, button{
+body, input, textarea, button, p, h1{
 	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
 }
+
 
