@@ -57,7 +57,7 @@ export function Login() {
 
   return (
 
-    <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '30%', pl: '35%' }}>
+    <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '30%', pl: '37rem' }}>
       <Grid sx={{ height: "800px", justifyContent: "center", alignItems: 'center', width: '900px', flexDirection: 'column' }} >
         <Grid sx={{ maxWidth: '80%' }}>
           <Stack>
@@ -82,7 +82,13 @@ export function Login() {
                       '& fieldset': { borderColor: 'gray' },
                       '&:hover fieldset': { borderColor: 'white' }
                     },
-                    '& label': { color: 'white' }
+                    '& .MuiInputBase-input': {
+                      color: 'white'										
+                    },
+                    '& label': { 
+                      color: 'white', 
+                      height: '20px' 
+                    }
 
 
                   }}
@@ -98,7 +104,10 @@ export function Login() {
                       '& fieldset': { borderColor: 'gray' },
                       '&:hover fieldset': { borderColor: 'white' }
                     },
-                    '& label': { color: 'white' }
+                    '& .MuiInputBase-input': {
+                      color: 'white'										
+                    },
+                    '& label': { color: 'white', height: '20px' }
                   }}
                   variant="outlined">
                   <InputLabel
@@ -120,7 +129,7 @@ export function Login() {
                           onMouseUp={handleMouseUpPassword}
                           edge="end"
                         >
-                          {showPassword ? <EyeClosed /> : <Eye />}
+                          {showPassword ? <EyeClosed color='white'/> : <Eye color='white'/>}
                         </IconButton>
                       </InputAdornment>
                     }
