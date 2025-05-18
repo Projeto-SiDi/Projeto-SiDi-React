@@ -1,5 +1,6 @@
 import { EsqueciSenha } from "./components/EsqueciSenha.tsx";
 import { Login } from "./components/Login.tsx";
+import { RedefinirSenha } from "./components/RedefinirSenha.tsx";
 
 export function App (){
 	return(
@@ -7,7 +8,7 @@ export function App (){
 		
 			<Login />
 			<EsqueciSenha />
-		
+			<RedefinirSenha />
 
 		</>
 	);

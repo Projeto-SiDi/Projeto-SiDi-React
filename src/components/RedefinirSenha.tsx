@@ -8,7 +8,7 @@ import TextField from '@mui/material/TextField';
 import { FormControl, Button } from '@mui/material';
 import LogoSidi from '../assets/LogoSidi.svg';
 
-export function EsqueciSenha() {
+export function RedefinirSenha() {
 
 	const Item = styled(Paper)(({ theme }) => ({
 		backgroundColor: '#303741',
@@ -29,6 +29,7 @@ export function EsqueciSenha() {
 	const headerStyle = {
 		color: '#ffff',
 		fontSize: '40px'
+		
 	}
 
 	const LogoSidiStyle = {
@@ -41,7 +42,7 @@ export function EsqueciSenha() {
 	return (
 
 		<div>
-			<Box sx={{ display: 'flex', alignItems: 'center', minWidth: '30%', pl: '35rem' }}>
+			<Box sx={{ display: 'flex', alignItems: 'center', minWidth: '6rem', pl: '36rem' }}>
 				<Grid sx={{ height: "600px", justifyContent: "center", alignItems: 'center', width: '992px', flexDirection: 'column' }} >
 					<Grid sx={{ maxWidth: '80%' }}>
 						<Stack>
@@ -49,11 +50,11 @@ export function EsqueciSenha() {
 
 
 								<div>
-									<Box sx={{ height: '150px', py: '5rem', fontWeight: '800', display: 'flex', flexDirection: 'column' }}>
+									<Box sx={{ height: '130px', py: '3rem', fontWeight: '800', display: 'flex', flexDirection: 'column' }}>
 										<Grid sx={{ height: '70px' }}>
-											<h1 style={headerStyle} >Esqueceu sua senha?</h1>
-											<h2 style={headerStyle} >Vamos ajudar você</h2>
-											<img src={LogoSidi} style={LogoSidiStyle} />
+											<h1 style={headerStyle} >Insira sua nova senha</h1>
+											<img  src={LogoSidi} style={LogoSidiStyle} />								
+											
 										</Grid>
 									</Box>
 
@@ -61,12 +62,34 @@ export function EsqueciSenha() {
 									<FormControl sx={{ m: 1, width: '38rem', height: '56px' }} variant="outlined">
 										<TextField
 											id="outlined-multiline-flexible"
-											label="Digite seu email"
+											label="Nova senha"
 											maxRows={2}
 											sx={{
 												height: '56px',
 												width: '38rem',
-												marginTop: '25%',
+												marginTop: '6rem',
+												marginBottom: '30px',
+												'& .MuiOutlinedInput-root':
+												{
+													'& fieldset': { borderColor: 'gray' },
+													'&:hover fieldset': { borderColor: 'white' }
+												},
+												'& .MuiInputBase-input': {
+													color: 'white'
+												},
+												'& label': { color: 'white', height: '20px' }
+
+											}}
+
+										/>
+
+										<TextField
+											id="outlined-multiline-flexible"
+											label="Confirmar nova senha"
+											maxRows={2}
+											sx={{
+												height: '56px',
+												width: '38rem',
 												marginBottom: '30px',
 												'& .MuiOutlinedInput-root':
 												{
