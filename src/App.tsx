@@ -1,13 +1,15 @@
 import { EsqueciSenha } from "./components/EsqueciSenha.tsx";
 import { Login } from "./components/Login.tsx";
-import { RedefinirSenha } from "./components/RedefinirSenha.tsx";
+import { RedefinirSenha } from "./components/RedefinirSenha.tsx";]
+import { VerificarConta } from "./components/VerifiqueConta.tsx";
 
 export function App (){
 	return(
 		<>
 		
-			<Login />
+			<VerificarConta />
 			<EsqueciSenha />
+			<Login />
 			<RedefinirSenha />
 
 		</>
