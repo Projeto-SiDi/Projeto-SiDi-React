@@ -1,6 +1,16 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+
+// Substituindo Card e Button por versões simples com Tailwind
+const Card = ({ children }) => (
+  <div className="bg-white rounded-xl shadow p-4">{children}</div>
+);
+const CardContent = ({ children }) => <div>{children}</div>;
+const Button = ({ children }) => (
+  <button className="bg-[#1d252f] text-white px-4 py-2 rounded hover:bg-[#141b22]">
+    {children}
+  </button>
+);
+
 import { Home, User, Clock, Settings, LogOut, Pencil } from "lucide-react";
 
 export default function Perfil() {
@@ -51,9 +61,9 @@ export default function Perfil() {
 
             {/* Botões */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
-              <Button className="bg-[#1d252f] text-white">EDITAR DADOS</Button>
-              <Button className="bg-[#1d252f] text-white">ALTERAR FOTO</Button>
-              <Button className="bg-[#1d252f] text-white">REDEFINIR SENHA</Button>
+              <Button>EDITAR DADOS</Button>
+              <Button>ALTERAR FOTO</Button>
+              <Button>REDEFINIR SENHA</Button>
             </div>
           </CardContent>
         </Card>
