@@ -7,6 +7,7 @@ import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import { FormControl, Button } from '@mui/material';
 import LogoSidi from '../assets/LogoSidi.svg';
+import { Link } from 'react-router';
 
 export function RedefinirSenha() {
 
@@ -42,7 +43,7 @@ export function RedefinirSenha() {
 	return (
 
 		<div>
-			<Box sx={{ display: 'flex', alignItems: 'center', minWidth: '6rem', pl: '36rem' }}>
+			<Box sx={{ display: 'flex', alignItems: 'center', minWidth: '6rem', pl: '35rem' }}>
 				<Grid sx={{ height: "600px", justifyContent: "center", alignItems: 'center', width: '992px', flexDirection: 'column' }} >
 					<Grid sx={{ maxWidth: '80%' }}>
 						<Stack>
@@ -106,7 +107,7 @@ export function RedefinirSenha() {
 										/>
 
 
-										<Button style={BuuttonStyle} variant='contained' sx={{ marginTop: '20px' }}>Proximo</Button>
+										<Button component={Link} to="/" style={BuuttonStyle} variant='contained' sx={{ marginTop: '20px' }}>Confirmar</Button>
 
 									</FormControl>
 

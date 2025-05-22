@@ -137,8 +137,9 @@ export function Login() {
                   />
                   <Button style={BuuttonStyle} variant='contained' sx={{ marginTop: '20px' }}>Entrar</Button>
 
-                  <Link href="#" underline="always" sx={{ paddingTop: '40px' }}>
+                  <Link href="/esqueciSenha" underline="always" sx={{ paddingTop: '40px' }}>
                     {'Esqueceu a senha?'}
+                    
                   </Link>
 
                   <Link href="#" underline="always" sx={{ paddingTop: '40px', maxWidth: '130px', marginLeft: '237px' }}>
