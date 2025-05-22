@@ -7,6 +7,7 @@ import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import { FormControl, Button } from '@mui/material';
 import LogoSidi from '../assets/LogoSidi.svg';
+import { Link } from 'react-router';
 
 export function EsqueciSenha() {
 
@@ -83,7 +84,7 @@ export function EsqueciSenha() {
 										/>
 
 
-										<Button style={BuuttonStyle} variant='contained' sx={{ marginTop: '20px' }}>Proximo</Button>
+										<Button component={Link} to="/redefinirSenha" style={BuuttonStyle} variant='contained' sx={{ marginTop: '20px' }}>Proximo</Button>
 
 									</FormControl>
 
