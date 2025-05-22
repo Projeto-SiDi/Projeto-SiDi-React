@@ -1,6 +1,6 @@
 import React from "react";
 
-// Substituindo Card e Button por versões simples com Tailwind
+
 const Card = ({ children }) => (
   <div className="bg-white rounded-xl shadow p-4">{children}</div>
 );
@@ -16,7 +16,7 @@ import { Home, User, Clock, Settings, LogOut, Pencil } from "lucide-react";
 export default function Perfil() {
   return (
     <div className="flex h-screen bg-[#2c333f]">
-      {/* Sidebar */}
+     
       <div className="w-20 sm:w-52 bg-[#96a0a2] flex flex-col justify-between py-6">
         <div className="space-y-4">
           <SidebarItem icon={<Home />} label="INÍCIO" />
@@ -47,10 +47,10 @@ export default function Perfil() {
 
               {/* Informações do usuário */}
               <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-white">
-                <Info label="JOSÉ ALMEIDA DA SILVA" isTitle />
+                <Info label="JOÃO RICARDO" isTitle />
                 <Info label="CARGO/DEPARTAMENTO:" value="ANALISTA / T.I" />
                 <Info label="MATRÍCULA:" value="00756829" />
-                <Info label="E-MAIL COORPORATIVO:" value="JOSE.ALMEIDA@SIDI.COM" />
+                <Info label="E-MAIL COORPORATIVO:" value="JOAO.RICARDO@SIDI.COM" />
                 <Info label="TELEFONE:" value="(81) 9 9543-8657" />
                 <Info label="JORNADA DE TRABALHO:" value="08:00 ÀS 17:00" />
                 <Info label="REGIME DE TRABALHO:" value="HÍBRIDO" />
