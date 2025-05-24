@@ -9,6 +9,7 @@ import { FormControl, InputLabel, OutlinedInput, InputAdornment, IconButton, But
 import { Eye, EyeClosed } from '@phosphor-icons/react';
 import Seja_Bem_vindo from '../assets/Seja_bem_vindo.svg';
 import LogoSidi from '../assets/LogoSidi.svg';
+import { Link as RouterLink } from 'react-router';
 
 
 export function Login() {
@@ -135,7 +136,7 @@ export function Login() {
                     }
                     label="Password"
                   />
-                  <Button style={BuuttonStyle} variant='contained' sx={{ marginTop: '20px' }}>Entrar</Button>
+                  <Button component={RouterLink} to="/baterPonto" style={BuuttonStyle} variant='contained' sx={{ marginTop: '20px' }}> Entrar </Button>
 
                   <Link href="/esqueciSenha" underline="always" sx={{ paddingTop: '40px' }}>
                     {'Esqueceu a senha?'}
