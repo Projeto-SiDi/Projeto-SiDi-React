@@ -1,16 +1,17 @@
 import * as React  from 'react';
-import { Box, Button, Container, createTheme, Grid2, Paper, Stack, styled, Tab, Table, TableCell, TableContainer, TableHead, TableRow, Tabs, Typography } from "@mui/material";
-import { Clock, Gear, House, Pencil, SignOut } from '@phosphor-icons/react';
+import { Box, Button, Container, createTheme, Fab, Grid2, Paper, Stack, styled, Tab, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Tabs, Typography } from "@mui/material";
+import { Clock, Gear, GreaterThan, House, Pencil, SignOut } from '@phosphor-icons/react';
 import { ThemeProvider } from '@emotion/react';
+import { Link as RouterLink } from 'react-router';
 
 
 function batidaDePonto(
   tipo: string,
   dia: string,
-  hora: number,
-  minuto: number
+  hora: string,
+
 ) {
-  return { tipo, dia, hora, minuto};
+  return { tipo, dia, hora};
 }
 
 export function BaterPonto(){
@@ -39,11 +40,10 @@ export function BaterPonto(){
 	}
 	
 	const rows = [
-		batidaDePonto('Frozen yoghurt', '22/12/2025', 6.0, 24, ),
-		batidaDePonto('Ice cream sandwich',  '22/12/2025', 9.0, 37, ),
-		batidaDePonto('Eclair',  '22/12/2025', 16.0, 24, ),
-		batidaDePonto('Cupcake',  '22/12/2025', 3.7, 67, ),
-		batidaDePonto('Gingerbread',  '22/12/2025', 16.0, 49, ),
+		batidaDePonto('Entrada', '22/12/2025', '08:00' ),
+		batidaDePonto('Almoço',  '22/12/2025', "12:00"),
+		batidaDePonto('Volta do almoço',  '22/12/2025', '13:00'),
+		batidaDePonto('Saída',  '22/12/2025', '17:00')
 	];
 
 	return(
@@ -145,7 +145,8 @@ export function BaterPonto(){
 													backgroundColor: '#838d89',
 													
 												}
-										}}		
+										}}
+										component={RouterLink} to="/"		
 									>
 									<SignOut size={60} color='#303741'/>
 									<span style={{color: "white"}} >Sair da conta</span>
@@ -177,21 +178,91 @@ export function BaterPonto(){
 
 									</Typography>
 							</Stack>
-							<Stack style={StyleMain} sx={{height: '741px', borderEndEndRadius: '9px', borderEndStartRadius: '9px'}}>
+							<Stack style={StyleMain} sx={{height: '741px', borderEndEndRadius: '9px', borderEndStartRadius: '9px', position: 'relative' }}>
 									<TableContainer>
 										<Table>
-											<TableHead>
-												<TableRow>
-													<TableCell align='left'> teste</TableCell>
-													<TableCell align='left'> teste</TableCell>
-													<TableCell align='left'> teste</TableCell>
-													<TableCell align='left'> teste</TableCell>
+											<TableHead sx={{height: '100px'}}>
+												<TableRow >
+													<TableCell  align='center'>  
+														<Typography variant='h4' 
+															sx={{
+																height: '1px', 
+																alignItems: 'center', 
+																display: 'flex', 
+																justifyContent: 'center', 
+																color: '#ffff', 
+																fontFamily: 'Roboto', 
+																fontWeight: 'Bold'
+															}}
+														>
+															Batida	
+														</Typography>
+													</TableCell>
+													<TableCell align='left'>
+														<Typography variant='h4' 
+															sx={{
+																height: '1px', 
+																alignItems: 'center', 
+																display: 'flex', 
+																justifyContent: 'center', 
+																color: '#ffff', 
+																fontFamily: 'Roboto', 
+																fontWeight: 'Bold'
+															}}
+														>
+															Data	
+														</Typography>
+													</TableCell>
+													<TableCell align='center'>
+														<Typography variant='h4' 
+															sx={{
+																height: '1px', 
+																alignItems: 'center', 
+																display: 'flex', 
+																justifyContent: 'center', 
+																color: '#ffff', 
+																fontFamily: 'Roboto', 
+																fontWeight: 'Bold'
+															}}
+														>
+															Hora	
+														</Typography>
+													</TableCell>
+													
 													
 												</TableRow>
 											</TableHead>
+
+											 <TableBody>
+													{rows.map((row) => (
+														<TableRow sx={{height: '150px', '&:last-child td, &:last-child th': { border: 0 }}}>
+																	
+															<TableCell sx={{color: 'var(--CinzaAzulado)'}} align='center'>{row.tipo}</TableCell>
+															<TableCell sx={{color: 'var(--CinzaAzulado)'}} align="center">{row.dia}</TableCell>
+															<TableCell sx={{color: 'var(--CinzaAzulado)'}} align="center">{row.hora}</TableCell>
+														
+														
+														</TableRow>
+													))}
+
+													
+												</TableBody>
+												
 										</Table>
+										
 									</TableContainer>
+									
 							</Stack>
+							<Fab sx={{height: '60px', width: '60px', position: 'absolute', top: 860, left: 937, zIndex: 2, background: '#1E2022'}}  aria-label='add'>
+								<GreaterThan color='#ffff' size={40}/>		
+							</Fab>
+							<Typography
+								variant='h5'
+								sx={{display: 'flex', justifyContent: 'center', marginTop: '25px'}}
+
+							>
+								Registrar ponto
+							</Typography>
 						</Container>
 					</Box>
 				</Box>
