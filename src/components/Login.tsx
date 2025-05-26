@@ -143,8 +143,8 @@ export function Login() {
                     
                   </Link>
 
-                  <Link href="#" underline="always" sx={{ paddingTop: '40px', maxWidth: '130px', marginLeft: '237px' }}>
-                    {'Criar uma conta'}
+                  <Link component={RouterLink} to="/criarconta" underline="always" sx={{ paddingTop: '40px', maxWidth: '130px', marginLeft: '237px' }}>
+  {'Criar uma conta'}
                   </Link>
                 </FormControl>
 
