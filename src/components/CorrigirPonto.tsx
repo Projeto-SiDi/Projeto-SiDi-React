@@ -63,24 +63,62 @@ export function CorrigirPonto() {
 />
             
             <Stack
-  direction="column"
+  direction="row"
   alignItems="center"
-  justifyContent="center"
-  spacing={1}
+  spacing={2}
   sx={{
     background: '#1E2022',
-    height: '50px',
+    height: '60px',
     borderTopRightRadius: '9px',
     borderTopLeftRadius: '9px',
-    overflowY: 'auto',
     py: 1,
+    px: 3,
     mt: 18,
   }}
 >
-  <Typography variant="h5" sx={{ color: 'white', fontWeight: 'bold' }}>
+  <Button
+    variant="contained"
+    sx={{
+      backgroundColor: '#949f9e',
+      color: 'white',
+      borderRadius: '999px',
+      textTransform: 'none',
+      fontWeight: 'bold',
+      fontSize: '0.9rem',
+      height: '35px',
+      px: 2,
+      minWidth: '120px',
+      '&:hover': {
+        backgroundColor: '#838d89',
+      },
+    }}
+    endIcon={<Box sx={{
+      width: 0,
+      height: 0,
+      borderLeft: '6px solid transparent',
+      borderRight: '6px solid transparent',
+      borderTop: '6px solid white',
+      ml: 1,
+    }} />}
+  >
+    FILTRO:
+  </Button>
+
+  <Typography
+    variant="h5"
+    sx={{
+      color: 'white',
+      fontWeight: 'bold',
+      flexGrow: 1,
+      textAlign: 'center',
+      pr: '120px', // evita sobrepor o botão à direita se você adicionar um no futuro
+    }}
+  >
     CORREÇÃO DE PONTO
   </Typography>
 </Stack>
+
+
 
 
 
@@ -155,7 +193,7 @@ export function CorrigirPonto() {
               sx={{
                 position: 'absolute',
                 top: 'calc(100vh - 120px)',
-                left: '50%',
+                left: '52%',
                 transform: 'translateX(-50%)',
                 zIndex: 10,
                 background: '#1E2022',
