@@ -43,7 +43,7 @@ export function RedefinirSenha() {
 	return (
 
 		<div>
-			<Box sx={{ display: 'flex', alignItems: 'center', minWidth: '6rem', pl: '35rem' }}>
+			<Box sx={{ display: 'flex', alignItems: 'center', minWidth: '6rem', pl: '43rem' }}>
 				<Grid sx={{ height: "600px", justifyContent: "center", alignItems: 'center', width: '992px', flexDirection: 'column' }} >
 					<Grid sx={{ maxWidth: '80%' }}>
 						<Stack>

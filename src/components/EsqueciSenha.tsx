@@ -42,7 +42,7 @@ export function EsqueciSenha() {
 	return (
 
 		<div>
-			<Box sx={{ display: 'flex', alignItems: 'center', minWidth: '30%', pl: '35rem' }}>
+			<Box sx={{ display: 'flex', alignItems: 'center', minWidth: '30%', pl: '43rem' }}>
 				<Grid sx={{ height: "600px", justifyContent: "center", alignItems: 'center', width: '992px', flexDirection: 'column' }} >
 					<Grid sx={{ maxWidth: '80%' }}>
 						<Stack>

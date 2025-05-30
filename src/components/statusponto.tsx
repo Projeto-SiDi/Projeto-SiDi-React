@@ -4,7 +4,7 @@ import { Home, User, Clock, Pencil, Settings, LogOut } from "lucide-react";
 
 export default function PerfilUsuario() {
   const dadosUsuario = {
-    nome: "Diego henrique da silva",
+    nome: "Jose Almeida da Silva",
     cargo: "ANALISTA / T.I",
     matricula: "00756829",
     email: "JOSE.ALMEIDA@SIDI.COM",
