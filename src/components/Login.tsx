@@ -58,7 +58,7 @@ export function Login() {
 
   return (
 
-    <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '30%', pl: '37rem' }}>
+    <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '30%', pl: '45rem' }}>
       <Grid sx={{ height: "800px", justifyContent: "center", alignItems: 'center', width: '900px', flexDirection: 'column' }} >
         <Grid sx={{ maxWidth: '80%' }}>
           <Stack>
